@@ -8,7 +8,16 @@ import { AccountService } from 'src/services/account.service';
 })
 export class AppComponent {
   title = 'invoice-frontend';
+  isUserLoggedIn = false;
+
   constructor(private account: AccountService){
-    this.account.getAPI();
   }
+
+  ngOnInit() {
+    let storeData = localStorage.getItem("isUserLoggedIn");
+      if( storeData != null && storeData == "true")
+         this.isUserLoggedIn = true;
+      else
+         this.isUserLoggedIn = false;
+   }
 }

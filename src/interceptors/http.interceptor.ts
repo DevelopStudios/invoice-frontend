@@ -6,23 +6,26 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AccountService } from 'src/services/account.service';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class HttpAppInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(private account: AccountService,private router: Router,) {}
+  
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    // add header with basic auth credentials if user is logged in and request is to the api url
+    const token = this.account.tokenValue;
 
-  intercept(req: HttpRequest<any>, next: HttpHandler) {
-    // Get the auth token from the service.
-    // const authToken = this.auth.getAuthorizationToken();
-
-    // Clone the request and replace the original headers with
-    // cloned headers, updated with the authorization.
-    const authReq = req.clone({
-      headers: req.headers
-    });
-    
-    // send cloned request with header to the next handler.
-    return next.handle(authReq);
+    if (token) {
+        request = request.clone({
+          setHeaders: {
+            Authorization: "Token " + token
+          }
+        });
+        
+    }
+    return next.handle(request);
   }
 }

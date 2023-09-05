@@ -10,26 +10,34 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpAppInterceptor } from 'src/interceptors/http.interceptor';
-
-
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpAppInterceptor,
       multi: true,
-    }
+    },
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatFormFieldModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatButtonModule,
+    MatInputModule,
     MatIconModule,
     HttpClientModule
   ],
