@@ -25,7 +25,7 @@ export class AccountService {
     localStorage.removeItem('access_token');
   }
   login(obj:any) {
-    return this.http.post('http://127.0.0.1:8000/auth/login/', obj).pipe(map((token:any) => {
+    return this.http.post('https://invoice-api-31fabc85cd9b.herokuapp.com/auth/login/', obj).pipe(map((token:any) => {
       localStorage.setItem('access_token', token.token);
       this.isUserLoggedIn = true;
       localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
