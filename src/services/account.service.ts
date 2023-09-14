@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
 import { BehaviorSubject, Observable, delay, map, of, tap } from 'rxjs';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AccountService {
   private tokenSubject: BehaviorSubject<any | null>;
   public token: Observable<any | null>;
@@ -24,8 +24,9 @@ export class AccountService {
   clearHeaders(){
     localStorage.removeItem('access_token');
   }
+
   login(obj:any) {
-    return this.http.post('https://invoice-api-31fabc85cd9b.herokuapp.com/auth/login/', obj).pipe(map((token:any) => {
+    return this.http.post(environment.apiUrl, obj).pipe(map((token:any) => {
       localStorage.setItem('access_token', token.token);
       this.isUserLoggedIn = true;
       localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
@@ -45,6 +46,6 @@ export class AccountService {
   }
 
   getAPI(){
-    this.http.get('https://invoice-api-31fabc85cd9b.herokuapp.com/api/invoices').subscribe(value => console.log(value));
+    this.http.get(environment.apiUrl).subscribe(value => console.log(value));
   }
 }
