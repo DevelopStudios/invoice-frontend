@@ -46,6 +46,6 @@ export class AccountService {
   }
 
   getAPI(){
-    this.http.get(environment.apiUrl).subscribe(value => console.log(value));
+    this.http.get(environment.apiUrl + 'auth/login').subscribe(value => console.log(value));
   }
 }
