@@ -26,7 +26,7 @@ export class AccountService {
   }
 
   login(obj:any) {
-    return this.http.post(environment.apiUrl, obj).pipe(map((token:any) => {
+    return this.http.post(environment.apiUrl + 'auth/login', obj).pipe(map((token:any) => {
       localStorage.setItem('access_token', token.token);
       this.isUserLoggedIn = true;
       localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
@@ -46,6 +46,6 @@ export class AccountService {
   }
 
   getAPI(){
-    this.http.get(environment.apiUrl + 'auth/login').subscribe(value => console.log(value));
+    this.http.get(environment.apiUrl).subscribe(value => console.log(value));
   }
 }
