@@ -45,6 +45,6 @@ export class AccountService {
   }
 
   getAPI(){
-    this.http.get('http://127.0.0.1:8000/api/invoices').subscribe(value => console.log(value));
+    this.http.get('https://invoice-api-31fabc85cd9b.herokuapp.com/api/invoices').subscribe(value => console.log(value));
   }
 }
