@@ -20,4 +20,5 @@ export class AppComponent {
       else
          this.isUserLoggedIn = false;
    }
-}
+   
+  }

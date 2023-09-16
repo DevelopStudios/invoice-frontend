@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggedUser } from 'src/ models/logged-user.model';
 import { AccountService } from 'src/services/account.service';
 
 @Component({
@@ -7,7 +8,16 @@ import { AccountService } from 'src/services/account.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  user:LoggedUser = {username:'',picture:''};
   constructor(private account: AccountService){
     this.account.getAPI();
+  }
+
+  ngOnInit(){
+    this.account.getRandomUser().subscribe((value:any) => {
+      console.log(value);
+      this.user.picture = value.results[0].picture.large;
+      this.user.username = value.results[0].name;
+    });
   }
 }

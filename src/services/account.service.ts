@@ -48,4 +48,8 @@ export class AccountService {
   getAPI(){
     this.http.get(environment.apiUrl).subscribe(value => console.log(value));
   }
+
+  getRandomUser() {
+    return this.http.get('https://randomuser.me/api/');
+  }
 }
