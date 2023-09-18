@@ -19,8 +19,7 @@ export class LoginComponent {
     this.obj.username = this.username;
     this.obj.password = this.password;
     this.account.login(this.obj).subscribe(data => {
-      console.log('Loggin success');
-      this.router.navigate(['']);
+      this.router.navigate(['/list']);
     });
   }
 

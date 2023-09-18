@@ -15,12 +15,14 @@ import { HomeComponent } from './components/home/home.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
+import { GlobalFilterComponent } from './components/global-filter/global-filter.component';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    GlobalFilterComponent
   ],
   providers: [
     {
@@ -38,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     MatButtonModule,
     MatInputModule,
+    MatMenuModule,
     MatIconModule,
     HttpClientModule
   ],

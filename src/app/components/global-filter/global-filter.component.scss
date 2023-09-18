@@ -1,0 +1,72 @@
+.filter-container {
+    display: flex;
+    align-items: center;
+    width: 730px;
+    justify-content: space-between;
+    .left-container {
+        h2 {
+            font-family: League Spartan;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -1.125px;
+            margin: 0;
+            padding-bottom: 7px;
+        }
+        p {
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px; /* 115.385% */
+            letter-spacing: -0.1px;
+            color: #888EB0;
+            margin: 0;
+        }
+        
+    }
+    .right-container {
+        button.mat-mdc-menu-trigger.filter-button {
+            margin-right: 23px;
+        }
+        .filter-button .text {
+            display: flex;
+            align-items: center;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: -0.25px;
+            mat-icon.mat-icon {
+                color: #7C5DFA;
+                margin-left: 6px;
+            }
+        }
+        button.add-invoice {
+            background: #7C5DFA !important;
+            border-radius: 50px;
+            height: 49px;
+            margin: 0;
+            padding: 0 14.5px;
+            mat-icon.mat-icon {
+                background: #fff;
+                border-radius: 82px;
+                padding: 7px;
+                color: #7c5dfb;
+                font-weight: bold;
+            }
+            span.button-text {
+                color: #FFF;
+                font-family: League Spartan;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: -0.25px;
+                margin-left: 7px;
+            }
+        }
+    }
+}

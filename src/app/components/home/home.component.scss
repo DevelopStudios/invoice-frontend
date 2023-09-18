@@ -28,10 +28,11 @@
   }
   .user-section {
     position: absolute;
-    bottom: 25px;
+    bottom: 8px;
     width: 100%;
     display: flex;
     justify-content: center;
+    border-top: 1px solid #494E6E;
     .image--cover {
       width: 40px;
       height: 40px;

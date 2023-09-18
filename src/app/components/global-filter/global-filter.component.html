@@ -1,0 +1,22 @@
+<div class="filter-container">
+    <div class="left-container">
+        <h2>
+            Invoices
+        </h2>
+        <p>There are 7 total invoices</p>
+    </div>
+    <div class="right-container">
+        <div class="filter-button">
+            <button mat-button [matMenuTriggerFor]="menu" class="filter-button">
+                <div class="text">
+                    Filter by status <mat-icon>keyboard_arrow_down</mat-icon>
+                </div>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+            <button mat-flat-button class="add-invoice"><mat-icon>add</mat-icon> <span class="button-text">New Invoice</span></button>
+        </div>
+    </div>
+</div>
