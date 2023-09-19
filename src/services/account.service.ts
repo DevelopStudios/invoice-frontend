@@ -45,8 +45,12 @@ export class AccountService {
        localStorage.removeItem('isUserLoggedIn'); 
   }
 
-  getAPI(){
-    this.http.get(environment.apiUrl).subscribe(value => console.log(value));
+  getInvoices(){
+    return this.http.get(environment.apiUrl+'/api/invoices');
+  }
+
+  getStatuses() {
+    return this.http.get(environment.apiUrl+'/api/statuses');
   }
 
   getRandomUser() {

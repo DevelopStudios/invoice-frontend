@@ -10,7 +10,6 @@ import { AccountService } from 'src/services/account.service';
 export class HomeComponent {
   user:LoggedUser = {username:'',picture:''};
   constructor(private account: AccountService){
-    this.account.getAPI();
   }
 
   ngOnInit(){

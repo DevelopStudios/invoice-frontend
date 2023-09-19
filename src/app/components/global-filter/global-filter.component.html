@@ -3,7 +3,7 @@
         <h2>
             Invoices
         </h2>
-        <p>There are 7 total invoices</p>
+        <p>There are {{invoices.length}} total invoices</p>
     </div>
     <div class="right-container">
         <div class="filter-button">
@@ -17,6 +17,26 @@
                 <button mat-menu-item>Item 2</button>
             </mat-menu>
             <button mat-flat-button class="add-invoice"><mat-icon>add</mat-icon> <span class="button-text">New Invoice</span></button>
+        </div>
+    </div>
+</div>
+
+<div class="list-container">
+    <div class="list-entry" *ngFor="let item of invoices">
+        <div class="id">
+            <span class="number">#</span>{{item.id}}
+        </div>
+        <div class="date">
+            {{item.invoice_date}}
+        </div>
+        <div class="client">
+            {{item.client_name}}
+        </div>
+        <div class="price">
+            £ 1,800.90
+        </div>
+        <div class="status">
+            {{checkStatusId(item.status)}}
         </div>
     </div>
 </div>

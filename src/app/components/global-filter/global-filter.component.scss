@@ -70,3 +70,14 @@
         }
     }
 }
+
+
+.list-container {
+    margin-top: 70px;
+    .list-entry {
+        background: #fff;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
