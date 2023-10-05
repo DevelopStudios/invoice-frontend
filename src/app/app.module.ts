@@ -17,12 +17,15 @@ import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { GlobalFilterComponent } from './components/global-filter/global-filter.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { GlobalListItemComponent } from './components/global-list-item/global-list-item.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    GlobalFilterComponent
+    GlobalFilterComponent,
+    GlobalListItemComponent
   ],
   providers: [
     {
@@ -37,6 +40,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatFormFieldModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatProgressSpinnerModule,
     MatSidenavModule,
     MatButtonModule,
     MatInputModule,

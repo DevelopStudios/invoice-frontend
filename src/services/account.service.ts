@@ -49,6 +49,10 @@ export class AccountService {
     return this.http.get(environment.apiUrl+'/api/invoices');
   }
 
+  getInvoice(id:number){
+    return this.http.get(environment.apiUrl+'/api/invoices/'+id);
+  }
+
   getStatuses() {
     return this.http.get(environment.apiUrl+'/api/statuses');
   }

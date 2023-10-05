@@ -11,12 +11,15 @@ import { AccountService } from 'src/services/account.service';
 export class GlobalFilterComponent {
   invoices: Invoice[]=[];
   statuses: Status[]=[];
+  showLoader: Boolean = false;
   constructor(private account:AccountService ){
 
   }
   ngOnInit(){
+    this.showLoader = true
     this.account.getInvoices().subscribe((value:any) => {
       this.invoices = value;
+      this.showLoader = false;
     });
     this.account.getStatuses().subscribe((value:any) => {
       this.statuses = value;

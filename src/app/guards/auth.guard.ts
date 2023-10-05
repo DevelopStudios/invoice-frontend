@@ -24,7 +24,6 @@ export class AuthGuard {
               let val: any = localStorage.getItem('isUserLoggedIn');
      
               if(val != null && val == "true"){
-                  console.log(url);
                  if(url == "/login")
                     this.router.navigate(['']);
                   else if(url == '/') {

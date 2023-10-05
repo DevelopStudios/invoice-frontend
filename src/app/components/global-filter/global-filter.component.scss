@@ -71,7 +71,6 @@
     }
 }
 
-
 .list-container {
     margin-top: 70px;
     .list-entry {
@@ -79,5 +78,103 @@
         padding: 30px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 14px;
+        .id,.price{
+            color: #0C0E16;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: -0.25px;
+        }
+        .date {
+            color: #7E88C3;
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: -0.1px;
+        }
+        .client {
+            color: #858BB2;
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: -0.1px;
+        }
+        .status .pending {
+            width: 67px;
+            height: 13px;
+            flex-grow: 0;
+            margin: 0 20px 0 40px;
+            padding: 14px 19px 11px 18px;
+            opacity: 0.06;
+            border-radius: 6px;
+            background-color: #ff8f00;
+        }
+        .status .paid {
+            width: 67px;
+            height: 13px;
+            flex-grow: 0;
+            margin: 0 20px 0 40px;
+            padding: 14px 19px 11px 18px;
+            opacity: 0.06;
+            border-radius: 6px;
+            background-color: #33d69f
+        }
+        .status .text {
+            .dot {
+                width: 8px;
+                height: 8px;
+                margin: 3px 8px 4px 0;
+                background-color: #ff8f00;
+                border-radius: 30px;
+            }
+            position: absolute;
+            display: flex;
+            margin-top: -26px;
+            margin-left: 53px;
+            font-family: League Spartan;
+            font-size: 15px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: -0.25px;
+            text-align: left;
+            color: #ff8f00;
+            width: 77px;
+            justify-content: space-between;
+        }
+    }   
+    .status.paid .text {
+        .dot {
+            width: 8px;
+            height: 8px;
+            margin: 3px 8px 4px 0;
+            background-color: #33d69f !important;
+            border-radius: 30px;
+        }
+        width: 44px !important;
+        margin-left:68px !important;
+        color:#33d69f !important;
+    }
+    span.number {
+        color: #7E88C3;
+    }
+    .arrow-div mat-icon.mat-icon.notranslate.material-icons.mat-ligature-font.mat-icon-no-color {
+        color: #7C5DFA;
+    }
+    .empty-container {
+        text-align: center;
+    }
+    button.mdc-fab.mdc-fab--mini.mat-mdc-mini-fab.mat-accent.mat-mdc-button-base {
+        background: transparent;
+        box-shadow: none;
     }
 }

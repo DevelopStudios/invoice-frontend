@@ -1,0 +1,32 @@
+<div class="list-item_container">
+    <div class="navigation-container">
+        <button mat-mini-fab aria-label="Example icon button with a filter list icon">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <div class="text">
+            Go Back
+        </div>
+    </div>
+    <div class="action-container">
+        <div class="left-container">
+            <div class="text">
+                Status
+            </div>
+  
+            <div *ngIf="invoice?.status" class="status" [ngClass]="{'paid': checkStatusId(invoice?.status)==='Paid', 'pending': checkStatusId(invoice?.status)==='Pending'}">
+                <div class="background" [ngClass]="{'paid': checkStatusId(invoice?.status)==='Paid', 'pending': checkStatusId(invoice?.status)==='Pending'}">
+                    
+                </div>
+                <div class="text">
+                    <div class="dot"></div>
+                    {{checkStatusId(invoice?.status)}}
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <button mat-flat-button class="edit">Edit</button>
+            <button mat-flat-button class="delete">Delete</button>
+            <button mat-flat-button class="paid">Mark as Paid</button>
+        </div>
+    </div>
+</div>
