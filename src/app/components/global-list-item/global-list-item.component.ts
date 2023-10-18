@@ -16,7 +16,7 @@ export class GlobalListItemComponent implements OnInit {
   }
 
   checkStatusId(id:number) {
-    return this.statuses.filter(value => value.id === id)[0].status;
+    return this.statuses.filter(value => value?.id === id)[0]?.status;
   }
 
   ngOnInit(){

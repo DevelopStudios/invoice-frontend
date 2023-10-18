@@ -45,9 +45,12 @@
             </div>
         </div>
         <div class="arrow-div">
-            <button mat-mini-fab aria-label="Example icon button with a filter list icon">
-                <mat-icon>keyboard_arrow_right</mat-icon>
-            </button>
+            <a [routerLink]=[item.id]>
+                <button mat-mini-fab aria-label="Example icon button with a filter list icon">
+                    <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+            </a>
+            
         </div>
     </div>
     <div class="empty-container" *ngIf="invoices.length === 0 || showLoader === true">

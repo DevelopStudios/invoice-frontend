@@ -102,17 +102,57 @@
     line-height: 15px;
     letter-spacing: -0.1px;
 }
-
+.parent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .left-container-grid h2.id {
+        color: var(--08, #0C0E16);
+        font-family: League Spartan;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.25px;
+    }
+    .description {
+        color: var(--07, #7E88C3);
+        font-family: League Spartan;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: -0.1px;
+    }
+    .address {
+        color: var(--07, #7E88C3);
+        text-align: right;
+        font-family: League Spartan;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.1px;
+    }
+}
+    
+    .right-container-grid { grid-area: 1 / 2 / 2 / 3; }
+    .left-container-grid { grid-area: 1 / 1 / 2 / 2; }
 .action-container .right-container {
     button.edit {
         border-radius: 24px;
         background: #F9FAFE;
         color:#7E88C3;
+        margin-right:8px;
     }
     button.delete {
         border-radius: 24px;
         background: #EC5757;
         color:#fff;
+        margin-right:8px;
     }
     button.paid {
         border-radius: 24px;

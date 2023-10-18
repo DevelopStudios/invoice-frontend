@@ -1,8 +1,11 @@
 <div class="list-item_container">
     <div class="navigation-container">
-        <button mat-mini-fab aria-label="Example icon button with a filter list icon">
-            <mat-icon>keyboard_arrow_left</mat-icon>
-        </button>
+        <a routerLink="/list">
+            <button mat-mini-fab aria-label="Example icon button with a filter list icon">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+        </a>
+        
         <div class="text">
             Go Back
         </div>
@@ -27,6 +30,38 @@
             <button mat-flat-button class="edit">Edit</button>
             <button mat-flat-button class="delete">Delete</button>
             <button mat-flat-button class="paid">Mark as Paid</button>
+        </div>
+    </div>
+    <div class="action-container">
+        <div class="parent">
+            
+            <div class="left-container-grid">
+
+                <h2 class="id">
+                #{{invoice?.id}}
+                </h2>
+
+                <div class="description">
+                    {{invoice?.project_description}}
+                </div>
+
+            </div>
+            <div class="right-container-grid">
+               <div class="address">
+                <div class="from-address">
+                    {{invoice?.from_street_address}}
+                </div>
+                <div class="from-city">
+                    {{invoice?.from_city}}
+                </div>
+                <div class="from-post-code">
+                    {{invoice?.from_post_code}}
+                </div>
+                <div class="from-country">
+                    {{invoice?.from_country}}
+                </div>
+               </div>
+            </div>
         </div>
     </div>
 </div>
