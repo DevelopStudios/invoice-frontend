@@ -1,0 +1,61 @@
+
+.invoice-item_container {
+    border-radius: 8px 8px 0px 0px;
+    background: #F9FAFE;
+    padding: 20px;
+    margin-top: 40px;
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        .item {
+            .text.name {
+                color: var(--08, #0C0E16);
+                font-family: League Spartan;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px; /* 100% */
+                letter-spacing: -0.25px;
+            }
+            .text.qty {
+                color: var(--07, #7E88C3);
+                font-family: League Spartan;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: -0.25px;
+            }
+            .text.price {
+                color: var(--07, #7E88C3);
+                font-family: League Spartan;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: -0.25px;
+            }
+            .text.total {
+                color: var(--08, #0C0E16);
+                font-family: League Spartan;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: -0.25px;
+            }
+        }
+        .heading {
+            color: var(--07, #7E88C3);
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 138.462% */
+            letter-spacing: -0.1px;
+        }
+    }    
+}

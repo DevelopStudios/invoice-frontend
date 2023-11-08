@@ -57,6 +57,10 @@ export class AccountService {
     return this.http.get(environment.apiUrl+'/api/statuses');
   }
 
+  getInvoiceItems() {
+    return this.http.get(environment.apiUrl+'/api/items');
+  }
+
   getRandomUser() {
     return this.http.get('https://randomuser.me/api/');
   }

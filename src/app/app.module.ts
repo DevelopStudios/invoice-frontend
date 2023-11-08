@@ -19,13 +19,15 @@ import { GlobalFilterComponent } from './components/global-filter/global-filter.
 import {MatMenuModule} from '@angular/material/menu';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { GlobalListItemComponent } from './components/global-list-item/global-list-item.component';
+import { InvoiceItemsComponent } from './shared/invoice-items/invoice-items.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     GlobalFilterComponent,
-    GlobalListItemComponent
+    GlobalListItemComponent,
+    InvoiceItemsComponent
   ],
   providers: [
     {

@@ -102,13 +102,65 @@
     line-height: 15px;
     letter-spacing: -0.1px;
 }
-.parent {
+.address-from-info {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display:flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.invoice_details-middle .invoice_to-details .address {
+    text-align: left !Important;
+}
+.invoice_details-left .invoice_date {
+    color: var(--08, #0C0E16);
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: -0.25px;
+}
+
+.invoice_details-left .text {
+    color: var(--08, #0C0E16);
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: -0.25px;
+}
+.invoice_details-right .invoice-sent_details .text.name {
+    color: var(--08, #0C0E16);
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.25px;
+}
+.info-container {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    .address-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .address {
+        color: var(--07, #7E88C3);
+        text-align: right;
+        font-family: League Spartan;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.1px;
+    }
+}
+.address-info {
+    
     .left-container-grid h2.id {
         color: var(--08, #0C0E16);
         font-family: League Spartan;
@@ -127,20 +179,29 @@
         line-height: 15px;
         letter-spacing: -0.1px;
     }
-    .address {
-        color: var(--07, #7E88C3);
-        text-align: right;
-        font-family: League Spartan;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: -0.1px;
-    }
-}
     
-    .right-container-grid { grid-area: 1 / 2 / 2 / 3; }
-    .left-container-grid { grid-area: 1 / 1 / 2 / 2; }
+}
+.invoice_details-left .payment-due {
+    margin-top: 20px;
+}
+.invoice_details-middle .invoice_to-details .text.name {
+    color: var(--08, #0C0E16);
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: -0.25px;
+}
+.address-from-info .header-text {
+    color: var(--07, #7E88C3);
+    font-family: League Spartan;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; /* 115.385% */
+    letter-spacing: -0.1px;
+}
 .action-container .right-container {
     button.edit {
         border-radius: 24px;

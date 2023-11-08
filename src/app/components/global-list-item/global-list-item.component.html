@@ -32,8 +32,8 @@
             <button mat-flat-button class="paid">Mark as Paid</button>
         </div>
     </div>
-    <div class="action-container">
-        <div class="parent">
+    <div class="info-container">
+        <div class="address-info">
             
             <div class="left-container-grid">
 
@@ -49,19 +49,77 @@
             <div class="right-container-grid">
                <div class="address">
                 <div class="from-address">
-                    {{invoice?.from_street_address}}
+                    {{invoice?.to_street_address}}
                 </div>
                 <div class="from-city">
-                    {{invoice?.from_city}}
+                    {{invoice?.to_city}}
                 </div>
                 <div class="from-post-code">
-                    {{invoice?.from_post_code}}
+                    {{invoice?.to_post_code}}
                 </div>
                 <div class="from-country">
-                    {{invoice?.from_country}}
+                    {{invoice?.to_country}}
                 </div>
                </div>
             </div>
+        </div>
+        <div class="address-from-info">
+            <div class="invoice_details-left">
+                <div class="invoice_date">
+                    <div class="header-text">
+                        Invoice Date
+                    </div>
+                    <div class="text">
+                        {{invoice?.invoice_date}}
+                    </div>
+                </div>
+                <div class="payment-due">
+                    <div class="header-text">
+                        Payment payment-due
+                    </div>
+                    <div class="text">
+                        {{invoice?.invoice_date}}
+                    </div>
+                </div>
+            </div>
+            <div class="invoice_details-middle">
+                <div class="invoice_to-details">
+                    <div class="header-text">
+                        Bill To
+                    </div>
+                    <div class="text name">
+                        {{invoice?.client_name}}
+                    </div>
+                    <div class="address">
+                        <div class="from-address">
+                            {{invoice?.from_street_address}}
+                        </div>
+                        <div class="from-city">
+                            {{invoice?.from_city}}
+                        </div>
+                        <div class="from-post-code">
+                            {{invoice?.from_post_code}}
+                        </div>
+                        <div class="from-country">
+                            {{invoice?.from_country}}
+                        </div>
+                       </div>
+                </div>
+            </div>
+            <div class="invoice_details-right">
+                <div class="invoice-sent_details">
+                    <div class="header-text">
+                        Sent to
+                    </div>
+                    <div class="text name">
+                        {{invoice?.client_email}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="invoice-items_container">
+            
+            <app-invoice-items [invoice_items]="invoice?.invoice_items" [items]="items"></app-invoice-items>
         </div>
     </div>
 </div>

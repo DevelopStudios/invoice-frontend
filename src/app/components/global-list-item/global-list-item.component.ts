@@ -11,6 +11,7 @@ import { AccountService } from 'src/services/account.service';
 })
 export class GlobalListItemComponent implements OnInit {
   invoice: any;
+  items: any;
   statuses: Status[]=[];
   constructor(private route:ActivatedRoute, private account:AccountService){
   }
@@ -22,6 +23,10 @@ export class GlobalListItemComponent implements OnInit {
   ngOnInit(){
     this.account.getStatuses().subscribe((value:any) => {
       this.statuses = value;
+    });
+
+    this.account.getInvoiceItems().subscribe((value:any)=> {
+      this.items = value;
     });
 
     this.route.params.subscribe((value:any) => {
