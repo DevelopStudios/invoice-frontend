@@ -1,7 +1,7 @@
 <div class="invoice-item_container">
     <div class="parent">
         <div class="item">
-            <div class="heading">
+            <div class="heading name">
                 Item Name
             </div>
         </div>
@@ -22,25 +22,33 @@
         </div>
     </div>
     <div class="parent" *ngFor="let item of invoice_items">
-        <div class="item">
+        <div class="item entry name">
             <div class="text name">
                 {{checkName(item)}}
             </div>
         </div>
-        <div class="item">
+        <div class="item entry">
             <div class="text qty">
                 {{checkQty(item)}}
             </div>
         </div>
-        <div class="item">
+        <div class="item entry">
             <div class="text price">
                 {{checkPrice(item)}}
             </div>
         </div>
-        <div class="item">
+        <div class="item entry">
             <div class="text total">
                 {{checkTotal(item)}}
             </div>
+        </div>
+    </div>
+    <div class="amount-due">
+        <div class="text">
+            Amount Due
+        </div>
+        <div class="amount">
+            £ 556.00
         </div>
     </div>
 </div>

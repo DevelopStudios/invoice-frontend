@@ -1,15 +1,18 @@
 
 .invoice-item_container {
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
     background: #F9FAFE;
-    padding: 20px;
+    padding: 30px 20px;
     margin-top: 40px;
     .parent {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 60% 15% 15% 10%;
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+        .item.entry {
+            margin: 40px 0px;
+        }
         .item {
             .text.name {
                 color: var(--08, #0C0E16);
@@ -57,5 +60,33 @@
             line-height: 18px; /* 138.462% */
             letter-spacing: -0.1px;
         }
-    }    
+    }
+    .amount-due {
+        border-radius: 0 0 8px 8px;
+        background: #373B53;
+        padding: 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 -18px -32px -18px;
+        .text {
+            color: #FFF;
+            font-family: League Spartan;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: -0.1px;
+        }
+        .amount {
+            color: #FFF;
+            text-align: right;
+            font-family: League Spartan;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: -0.5px;
+        }
+    }
 }
